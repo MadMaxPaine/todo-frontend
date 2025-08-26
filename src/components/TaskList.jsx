@@ -11,7 +11,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import AddTaskModal from "./AddTaskModal";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import LogoutButton from "./Logout";
 const TaskList = observer(({ categoryId }) => {
  const { task, category } = React.useContext(ctx);
  const [modalOpen, setModalOpen] = useState(false);
@@ -77,7 +76,7 @@ const TaskList = observer(({ categoryId }) => {
      >
       {sortAsc ? "Priority " : "Priority "}
      </Button>
-     <LogoutButton />
+
     </Stack>
 
    </Stack>
