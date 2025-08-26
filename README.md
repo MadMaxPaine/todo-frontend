@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Todo App Frontend
 
-## Getting Started
+Це фронтенд для простого todo-додатку з авторизацією, реєстрацією та категоріями задач.
 
-First, run the development server:
+## Технології
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- React (Next.js App Router)
+- MobX (стори)
+- Material UI (компоненти)
+- Axios (запити до API)
+
+## Структура проекту
+
+```
+src/
+  app/                // сторінки додатку (main, login, registration)
+  components/         // UI-компоненти (RegisterForm, TaskList, CategoryList, LogoutButton тощо)
+  stores/             // MobX-стори (UserStore, TaskStore, CategoryStore)
+  http/               // API-запити (userApi.js, taskApi.js)
+  utils/              // константи, утиліти
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Основні можливості
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Реєстрація та логін користувача
+- Додавання, редагування, видалення задач
+- Сортування та фільтрація задач по категоріях, статусу, пріоритету
+- Вихід з акаунта (logout)
+- Захист приватних сторінок (тільки для авторизованих)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Запуск
 
-## Learn More
+1. Встанови залежності:
+   ```
+   npm install
+   ```
+2. Запусти у режимі розробки:
+   ```
+   npm run dev
+   ```
+3. Відкрий [http://localhost:3000](http://localhost:3000) у браузері.
 
-To learn more about Next.js, take a look at the following resources:
+## Налаштування
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Для роботи потрібен бекенд (див. інструкцію у todo-backend).
+- API-адреса налаштовується у `src/utils/consts.js`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Авторизація
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Після реєстрації або логіну користувач автоматично потрапляє на головну сторінку.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Контакти
+
+Для питань та пропозицій звертайтесь до автора проекту.
+
+---
